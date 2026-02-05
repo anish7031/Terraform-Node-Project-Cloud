@@ -6,8 +6,8 @@ module "node_app" {
   docker_image    = "519848832066.dkr.ecr.us-east-1.amazonaws.com/node-poc:latest"
 }
 
-  resource "aws_ecs_service" "service"{
-  name            ="node-service"
+resource "aws_ecs_service" "service" {
+  name            = "node-service"
   cluster         = module.node_app.ecs_cluster_id
   task_definition = module.node_app.task_definition_arn
   desired_count   = 1
@@ -23,5 +23,5 @@ module "node_app" {
     container_port   = 3000
   }
 
-  }
+}
 
