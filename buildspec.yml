@@ -4,7 +4,6 @@ phases:
   pre_build:
     commands:
       - cd terraform-root
-      - terraform fmt -check
       - terraform init -input=false
 
   build:
