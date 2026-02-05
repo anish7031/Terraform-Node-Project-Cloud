@@ -3,7 +3,7 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - cd terraform
+      - cd terraform-root
       - terraform fmt -check
       - terraform init -input=false
 
